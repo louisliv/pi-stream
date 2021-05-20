@@ -28,7 +28,7 @@ class DataStore extends Store {
 
   buttonClick (id) {
     var button = this.buttons.find(x => x.id === id)
-    var postData = JSON.stringify({"button" : button.text });
+    var postData = JSON.stringify({"button" : button.id });
     var request = net.request({
       method: 'POST',
       url: 'http://127.0.0.1:5000/btn-click',
